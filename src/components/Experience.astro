@@ -1,0 +1,48 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const WORK_EXPERIENCE = [
+    {
+        date: "Dec 2022 - Present",
+        title: "Software Engineer",
+        company: "PadSquad",
+        description:
+            "At PadSquad, I play a crucial role in both front-end and back-end development, Focusing on elevating our platform to meet the latest UX/UI standards. My contributions significantly benefit the marketing, creative, and operations teams by creating new features, enhancing data visualization, reporting, and integration capabilities. My technical expertise spans Vue.js, Vuex, JavaScript, Node.js, MySQL, and AWS services."
+    },
+    {
+        date: "Mar 2020 -  Jan 2024",
+        title: "User Experience Analyst (UX/UI)",
+        company: "Judicial Branch of Dominican Republic",
+        description:
+            "As a UX/UI Aanlist, I've been instrumental in elevating the user experience and interface design of internal systems. My responsibilities extend beyond analysis and redesign; I lead the creation, implementation, and maintenance of public web platforms, ensuring they adhere to the latest UX/UI principles, accessibility standards (such as WCAG), and high security standards. This includes the implementation of a custom-made Content Management System (CMS) for public access, designed to enhance user interaction while ensuring compliance with key accessibility principles."
+    },
+    {
+        date: "Jan 2019 - Aug 2020",
+        title: "Database Analyst",
+        company:"National Emergency Response and Security System 911 (Dominican Republic)",
+        description:"Administering SQL Server/MySQL databases, developing databases and data analytics systems to optimize statistical efficiency and quality. My role involves implementing high-speed transaction recovery, ensuring data backup, maintaining database security, and managing database performance. I also handle various database issues and maintain data integrity, while utilizing tools like SQL Server Reporting Services and Microsoft Power BI Report Server."
+    },
+    {
+        date: "Mar 2016 - Jan 2019",
+        title: "Webmaster",
+        company: "National Emergency Response and Security System 911 (Dominican Republic)",
+        description:"As a web developer, I specialize in creating and updating websites and software applications using a variety of scripting languages and digital tools. My responsibilities include troubleshooting and optimizing website performance, maintaining server functionality, ensuring code quality and compatibility across devices, enhancing site security, and improving loading speeds. Additionally, I manage SEO updates and analyze site performance metrics."
+    },
+    {
+        date: "Feb 2013 - Mar 2016",
+        title: "Rich Media Developer and Developer",
+        company: "Therorem Inc.",
+        description:"In my role at Theorem, LLC, I focused on crafting cutting-edge HTML5/JavaScript digital advertising formats, playing a crucial role in campaign execution. My responsibilities spanned the entire project lifecycle, ensuring high-quality outcomes in both design and development."
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        WORK_EXPERIENCE.map((exp) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...exp} />
+            </li>
+        ))
+    }
+</ol>

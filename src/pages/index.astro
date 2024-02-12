@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Hero from "../components/Hero.astro"
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import About from '../components/About.astro';
+import CodeIcon from '../icons/CodeIcon.astro';
+import UserIcon from '../icons/UserIcon.astro';
+import BriefIcon from '../icons/BriefIcon.astro';
+---
+
+<Layout 
+	title="Melvic Sosa Portfolio - Software Engineer and Web Developer with 12+ years of experience"
+	description="Melvic Sosa is a Software Engineer and Web Developer with 12+ years of experience. He is also a Cybersecurity Enthusiast, Azure & Sharepoint Certified, and LPI Linux Certified. He is from the Dominican Republic."
+>
+	<main class="px-4">
+		<SectionContainer id="home" class="py-16 md:py-36">
+      <Hero>
+      	</slot>
+    	</Hero>
+    </SectionContainer>
+
+		<!-- Work Experience Timeline -->
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold pb-10 flex gap-x-3 items-center">
+				<BriefIcon class="size-7" />
+				Work Experience
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<!-- Projects -->
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semibold pb-10 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				Projects
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<!-- About -->
+		<SectionContainer id="about">
+			<h2 class="text-2xl font-semibold pb-10 flex gap-x-3 items-center">
+				<CodeIcon class="size-7" />
+				About
+			</h2>
+			<About />
+		</SectionContainer>
+
+	</main>
+
+</Layout>

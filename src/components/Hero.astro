@@ -1,0 +1,66 @@
+---
+import Badge from '../components/Badge.astro';
+import LinkedinIcon from '../icons/LinkedinIcon.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import AmazonIcon from '../icons/AmazonIcon.astro';
+import Pills from '../components/SocialPill.astro';
+
+const imageAlt = "Melvic Sosa";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16 mb-4"
+      alt="melvic sosa headline pic"
+      src="/img/melv-profile-headline.jpeg"
+      alt={imageAlt}
+    />
+    <a
+      href="hhttps://linkedin.com/in/melvic-sosa/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Open to work</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-sky-950 sm:text-5xl dark:text-white"
+  >
+    Hey, <span
+      class="text-transparent bg-clip-text bg-center bg-[url('/img/bg-gradient.gif')]"
+      >I'm Melvic Sosa.</span
+    >
+    <a
+      href="https://linkedin.com/in/melvic-sosa/"
+      target="_blank"
+      rel="noopener"
+      class="flex justify-center items-center"
+    >
+    </a>
+  </h1>
+  <p
+    class="mt-6 text-xl text-sky-950 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+  10+ years of experience. <strong
+      >Web Developer (Full-Stack) & Cybersecurity Enthusiast.</strong
+    > MS Azure & Sharepoint Certified / Linux LPI Certified. 🇩🇴
+  </p>
+
+  <!-- Social info nav bar -->
+  <nav class="flex gap-3 mt-6 font-light text-sm flex-wrap">
+    <Pills href="mailto:melvic.sosa@gmail.com">
+      <MailIcon class="size-4" />
+      Contact me
+    </Pills>
+    <Pills href="https://linkedin.com/in/melvic-sosa/">
+      <LinkedinIcon class="size-4" />
+      LinkedIn
+    </Pills>
+    <Pills href="https://www.amazon.com/Estaciones-Cr%C3%B3nicas-invierno-destiempo-Spanish/dp/1686179162/ref=sr_1_1?crid=3QJKD9D1IFNA2&keywords=melvic+sosa&qid=1707292807&sprefix=melvic+sos%2Caps%2C147&sr=8-1">
+      <AmazonIcon class="size-4" />
+      My Book
+    </Pills>
+  </nav>
+</div>

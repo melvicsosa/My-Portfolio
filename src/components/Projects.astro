@@ -1,0 +1,202 @@
+---
+import LinkButton from "../components/LinkButton.astro";
+import LinkIcon from "../icons/LinkIcon.astro";
+import VuejsIcon from "../icons/VuejsIcon.astro";
+import AzureIcon from "../icons/AzureIcon.astro";
+import SassIcon from "../icons/SassIcon.astro";
+import AwsIcon from "../icons/AwsIcon.astro";
+import MssqlserverIcon from "../icons/MssqlserverIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import WordpressIcon from "../icons/WordpressIcon.astro";
+import PhpIcon from "../icons/PhpIcon.astro";
+import TypescriptIcon from "../icons/TypescriptIcon.astro";
+import JavascriptIcon from "../icons/JavascriptIcon.astro";
+import MysqlIcon from "../icons/MysqlIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import NodejsIcon from "../icons/NodeJsIcon.astro";
+import JqueryIcon from "../icons/JqueryIcon.astro";
+import MicrosoftIcon from "../icons/MicrosoftIcon.astro";
+import Office365Icon from "../icons/Office365Icon.astro";
+import HtmlIcon from "../icons/HtmlIcon.astro";
+
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  github?: string;
+  tags: string[];
+}
+
+const TAGS = {
+  AWS: {
+    name: "AWS",
+    class: "bg-[#ff9900] text-white",
+    icon: AwsIcon,
+  },
+  AZURE: {
+    name: "Azure",
+    class: "bg-[#0089d6] text-white",
+    icon: AzureIcon,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#e34c26] text-white",
+    icon: HtmlIcon,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-yellow-400 text-black",
+    icon: JavascriptIcon,
+  },
+  JQUERY: {
+    name: "Jquery",
+    class: "bg-[#0769ad] text-white",
+    icon: JqueryIcon,
+  },
+  MSSQLSERVER: {
+    name: "MSSQL Server",
+    class: "bg-blue-500 text-white",
+    icon: MssqlserverIcon,
+  },
+  MICROSOFT: {
+    name: "Sharepoint",
+    class: "bg-[#7cbb00] text-white",
+    icon: MicrosoftIcon,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f] text-white",
+    icon: MysqlIcon,
+  },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-[#215732] text-white",
+    icon: NodejsIcon,
+  },
+  OFFICE365: {
+    name: "Office 365",
+    class: "bg-[#f35314] text-white",
+    icon: Office365Icon,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#4f5b93] text-white",
+    icon: PhpIcon,
+  },
+  SASS: {
+    name: "Sass",
+    class: "bg-[#cc6799] text-white",
+    icon: SassIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-blue-500 text-white",
+    icon: TailwindIcon,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-blue-500 text-white",
+    icon: TypescriptIcon,
+  },
+  VUEJS: {
+    name: "Vue JS",
+    class: "bg-[#42b883] text-white",
+    icon: VuejsIcon,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-black/80 text-white",
+    icon: WordpressIcon,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Simpli Studio - Ad Creative Management",
+    description:
+      "Contributed to the improvement of the platform by adding new features and fixing bugs. The platform is a web application that allows users to create and manage ad creatives for their campaigns. The platform is built with VueJS, NodeJS, and AWS.",
+    image: "/projects/simpli_01.webp",
+    link: "",
+    tags: [TAGS.VUEJS, TAGS.SASS, TAGS.NODEJS, TAGS.AWS],
+    github: ""
+  },
+  {
+    title: "Judicial Branch Dom. Rep Website",
+    description:
+      "For this site I developed a custom WordPress site using PHP, jQuery, mySql. This project was designed with a cloud-based architecture, emphasizing high security standards. It's optimized for SEO and Accessibility, ensuring a wide reach and ease of use. The website seamlessly integrates various in-house developed systems along with third-party applications, creating a comprehensive and user-friendly digital experience.",
+    image: "/projects/PoderJudicial.webp",
+    link: "https://poderjudicial.gob.do/",
+    tags: [TAGS.WORDPRESS, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT, TAGS.AZURE],
+    github: ""
+  },
+  {
+    title: "Judicial Branch Dom. Rep Intranet",
+    description:
+      "I led the UX/UI design using SharePoint Online, focusing on creating a user-friendly and efficient internal platform. This project involved integrating various Power Platform applications and custom JavaScript solutions. The design and functionality were tailored to enhance internal communication and workflow.",
+    image: "/projects/Intranet.webp",
+    link: "https://customers.microsoft.com/en-us/story/1403839100209674399-dominican-judicial-branch-national-government-azure-en-dominican-republic",
+    tags: [TAGS.OFFICE365, TAGS.MICROSOFT, TAGS.AZURE],
+    github: ""
+  },
+  {
+    title: "Pokedex with Speech Synthesis",
+    description:
+      "A a simple and user-friendly application that allows users to search for Pokémon and get descriptions. The data is fetched from the PokeAPI. One of the key features of this project is the implementation of the SpeechSynthesisUtterance interface, enabling the application to verbally announce the names and characteristics of each Pokémon.",
+    image: "/projects/Pokedex.webp",
+    link: "#",
+    tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.SASS],
+    github: "https://github.com/melvicsosa/Pokedex-VainillaJS"
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-6 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-300 lg:hover:border-gray-400 lg:hover:bg-gray-800/50 dark:lg:border-gray-800 dark:lg:hover:border-gray-700">
+      <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} alt={`Screenshot of the project ${image}`} />
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-xl font-bold text-sky-900 dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs cursor-pointer transition md:hover:scale-105 ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-base text-pretty font-light text-gray-500 dark:text-gray-300 md:col-span-3">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GithubIcon class="size-6" />
+              Code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <LinkIcon class="size-4" />
+              Preview
+            </LinkButton>
+          )}
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>
