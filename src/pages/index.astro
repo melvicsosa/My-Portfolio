@@ -15,12 +15,12 @@ import BriefIcon from '../icons/BriefIcon.astro';
 	description="Melvic Sosa is a Software Engineer and Web Developer with 12+ years of experience. He is also a Cybersecurity Enthusiast, Azure & Sharepoint Certified, and LPI Linux Certified. He is from the Dominican Republic."
 >
 	<main class="px-4">
-		<SectionContainer id="home" class="py-16 md:py-36">
+		<SectionContainer id="home" class="py-16 md:py-30">
       <Hero>
       	</slot>
     	</Hero>
     </SectionContainer>
-
+		<div class="space-y-24">
 		<!-- Work Experience Timeline -->
 		<SectionContainer id="experience">
 			<h2 class="text-2xl font-semibold pb-10 flex gap-x-3 items-center">
@@ -47,7 +47,7 @@ import BriefIcon from '../icons/BriefIcon.astro';
 			</h2>
 			<About />
 		</SectionContainer>
-
+	</div>
 	</main>
 
 </Layout>
