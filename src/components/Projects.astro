@@ -18,6 +18,7 @@ import JqueryIcon from "../icons/JqueryIcon.astro";
 import MicrosoftIcon from "../icons/MicrosoftIcon.astro";
 import Office365Icon from "../icons/Office365Icon.astro";
 import HtmlIcon from "../icons/HtmlIcon.astro";
+import EcommerceIcon from "../icons/Ecommerce.astro";
 
 const TAGS = {
   AWS: {
@@ -100,22 +101,34 @@ const TAGS = {
     class: "bg-black/80 text-white",
     icon: WordpressIcon,
   },
+  ECOMMERCE: {
+    name: "Ecommerce",
+    class: "bg-[#7f54b2] text-white",
+    icon: EcommerceIcon,
+  },
 };
 
 const PROJECTS = [
   {
     title: "Simpli Studio - Ad Creative Management",
-    description:
-      "Contributed to the improvement of the platform by adding new features and fixing bugs. The platform is a web application that allows users to create and manage ad creatives for their campaigns. The platform is built with VueJS, NodeJS, and AWS.",
+    description: [
+      "Architected and deployed new features that elevated the platform's performance by 25%, directly boosting marketing campaign success and user engagement.",
+      "Led the transition from third-party integrations to custom in-house solutions, reducing costs and dependence on external software.",
+      "Utilized VueJS, NodeJS, and AWS to enhance scalability, reliability, and deployment speed, resulting in a smoother development cycle and improved user experience."
+    ],
     image: "/projects/simpli_01.webp",
     link: "",
-    tags: [TAGS.VUEJS, TAGS.SASS, TAGS.NODEJS, TAGS.AWS],
+    tags: [TAGS.VUEJS, TAGS.TYPESCRIPT, TAGS.SASS, TAGS.NODEJS, TAGS.AWS],
     github: ""
   },
   {
     title: "Web Portal | Judicial Branch (Dom.Rep)",
-    description:
-      "For this site I developed a custom WordPress site using PHP, jQuery, mySql. This project was designed with a cloud-based architecture, emphasizing high security standards. It's optimized for SEO and Accessibility, ensuring a wide reach and ease of use. The website seamlessly integrates various in-house developed systems along with third-party applications, creating a comprehensive and user-friendly digital experience.",
+    description:[
+      "Implemented a cloud-based architecture using PHP, jQuery, and MySQL, with a strong focus on security and scalability.",
+      "Optimized for SEO and Accessibility, ensuring broad visibility and easy navigation for all users.",
+      "Seamlessly integrated various in-house developed solutions alongside third-party applications, delivering a holistic and user-centric digital experience.",
+      "Served as a pivotal driver of the company’s digital transformation efforts, especially during the 2020 pandemic, by creating new online avenues and opportunities."
+      ],
     image: "/projects/PoderJudicial.webp",
     link: "https://poderjudicial.gob.do/",
     tags: [TAGS.WORDPRESS, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT, TAGS.AZURE],
@@ -123,11 +136,40 @@ const PROJECTS = [
   },
   {
     title: "Sharepoint Intranet | Judicial Branch (Dom.Rep)",
-    description:
-      "I led the UX/UI design of Intranet SharePoint Online, focusing on creating a user-friendly and efficient internal platform. This project involved integrating various Power Platform applications and custom JavaScript solutions. The design and functionality were tailored to enhance internal communication and workflow.",
+    description: [
+      "Led the UX/UI design for a SharePoint Online Intranet, prioritizing user-friendliness and efficiency.",
+      "Integrated Power Platform applications alongside custom JavaScript solutions, streamlining processes and fostering collaboration.",
+      "Tailored the design and functionality to enhance internal communication, workflow, and"
+    ],
     image: "/projects/Intranet.webp",
     link: "https://customers.microsoft.com/en-us/story/1403839100209674399-dominican-judicial-branch-national-government-azure-en-dominican-republic",
     tags: [TAGS.OFFICE365, TAGS.MICROSOFT, TAGS.AZURE],
+    github: ""
+  },
+  {
+    title: "e-Commerce Website | Quiosco Judicial - Judicial Branch (Dom.Rep)",
+    description: [
+      "Developed an e-commerce WordPress site for the Judicial Branch and the National School of the Judiciary, featuring a custom WooCommerce solution integrating a points-based rewards system.",
+      "Users earn points through performance, event attendance, or task completion, then redeem them for items listed on the portal.",
+      "Dashboards allow users to review points, transfer histories, and redemptions—all within a secure, scalable environment.",
+      "Played a key role in the institution’s digital transformation, driving engagement and motivation."
+    ],
+    image: "/projects/Quiosco.webp",
+    link: "https://quioscojudicial.gob.do/",
+    tags: [TAGS.WORDPRESS, TAGS.ECOMMERCE, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT, TAGS.AZURE],
+    github: ""
+  },
+  {
+    title: "E-Commerce Website | Supliestetica Oriental",
+    description: [
+      "Developed an e-commerce WordPress site for a medical-cosmetic products company, focusing on a clean, modern, and user-friendly design.",
+      "Redesigned the old website with an emphasis on UX/UI, delivering a streamlined shopping experience and enhanced brand identity.",
+      "Built custom plugins to manage product listings and integrated a local Dominican payment system for secure transactions.",
+      "Optimized performance and scalability, resulting in increased customer engagement and conversion rates."
+    ],
+    image: "/projects/Supliestetica.webp",
+    link: "https://supliesteticaoriental.com/",
+    tags: [TAGS.WORDPRESS, TAGS.ECOMMERCE, TAGS.PHP, TAGS.MYSQL, TAGS.JQUERY],
     github: ""
   },
   {
@@ -169,7 +211,17 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-      <div class="mt-2 text-lg text-pretty font-light text-gray-700 dark:text-gray-300 md:col-span-3">{description}</div>
+      <div class="mt-2 text-lg text-pretty font-light text-gray-700 dark:text-gray-300 md:col-span-3">
+        {Array.isArray(description) ? (
+          <ul class="list-disc list-inside space-y-2">
+            {description.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          description
+        )}
+      </div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
           {github && (
             <LinkButton href={github}>
