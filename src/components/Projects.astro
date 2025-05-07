@@ -19,6 +19,13 @@ import MicrosoftIcon from "../icons/MicrosoftIcon.astro";
 import Office365Icon from "../icons/Office365Icon.astro";
 import HtmlIcon from "../icons/HtmlIcon.astro";
 import EcommerceIcon from "../icons/Ecommerce.astro";
+import StatamicIcon from "../icons/StatamicIcon.astro";
+import LaravelIcon from "../icons/LaravelIcon.astro";
+import RootsIcon from "../icons/RootsIcon.astro";
+import YarnIcon from "../icons/YarnIcon.astro";
+import ViteIcon from "../icons/ViteIcon.astro";
+import AlgoliaIcon from "../icons/AlgoliaIcon.astro";
+import GulpIcon from "../icons/GulpIcon.astro";
 
 const TAGS = {
   AWS: {
@@ -106,6 +113,41 @@ const TAGS = {
     class: "bg-[#7f54b2] text-white",
     icon: EcommerceIcon,
   },
+  STATAMIC: {
+    name: "Statamic",
+    class: "bg-[#ff2e4d] text-white",
+    icon: StatamicIcon,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#ff2d20] text-white",
+    icon: LaravelIcon,
+  },
+  ROOTS: {
+    name: "Roots.io",
+    class: "bg-[#525ddc] text-white",
+    icon: RootsIcon,
+  },
+  YARN: {
+    name: "Yarn",
+    class: "bg-[#2c8ebb] text-white",
+    icon: YarnIcon,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-[#646cff] text-white",
+    icon: ViteIcon,
+  },
+  ALGOLIA: {
+    name: "Algolia",
+    class: "bg-[#00758f] text-white",
+    icon: AlgoliaIcon,
+  },
+  GULP: {
+    name: "Gulp",
+    class: "bg-[#cf4647] text-white",
+    icon: GulpIcon,
+  },
 };
 
 const PROJECTS = [
@@ -122,12 +164,66 @@ const PROJECTS = [
     github: ""
   },
   {
+    title: "BuyRite Site - B2B Portal",
+    description: [
+      "Built a B2B portal with a custom template based on design file, using Laravel and Statamic CMS",
+      "Implemented company and user registration for a custom e-commerce portal",
+      "Developed automatic product synchronization from Google Sheets",
+      "Contributed significantly to both front-end and back-end development, including testing and automation"
+    ],
+    image: "/projects/buyrite.webp",
+    link: "https://buyrite.site/",
+    tags: [TAGS.LARAVEL, TAGS.STATAMIC, TAGS.TAILWIND, TAGS.VITE, TAGS.ECOMMERCE, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT],
+    github: ""
+  },
+  {
+    title: "IGIWAX - B2B Portal",
+    description: [
+      "Developed an informative portal with resource and product catalog using WordPress (Bedrock/Sage)",
+      "Implemented ACF-managed custom posts and taxonomies",
+      "Created MVC services extension and custom catalog e-commerce functionality",
+      "Integrated HubSpot forms via Gravity Forms",
+      "Key contributor in both front-end and back-end development"
+    ],
+    image: "/projects/igiwax.webp",
+    link: "https://igiwax.com/",
+    tags: [TAGS.WORDPRESS, TAGS.ROOTS, TAGS.YARN, TAGS.TAILWIND, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT],
+    github: ""
+  },
+  {
+    title: "iFoodDS – Enrollment Portal",
+    description: [
+      "Built an enrollment portal using WordPress (Bedrock/Sage)",
+      "Implemented ACF-managed custom post types and fields",
+      "Developed custom WooCommerce services for multi-variation pricing",
+      "Layout/Styles with Blade & Tailwind CSS",
+      "Key contributor in front-end and back-end development"
+    ],
+    image: "/projects/ifoodds.webp",
+    link: "https://supplier-trace.ifoodds.com/",
+    tags: [TAGS.WORDPRESS, TAGS.ROOTS, TAGS.YARN, TAGS.TAILWIND, TAGS.ECOMMERCE, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT],
+    github: ""
+  },
+  {
+    title: "Grade Construction - Project Showcase",
+    description: [
+      "CDeveloped an informative site with project showcases using WordPress (Bedrock/Sage)",
+      "Implemented ACF-managed custom post types and custom fields",
+      "Layout/Styles with Blade & Tailwind CSS",
+      "Key contributor in front-end and back-end development"
+    ],
+    image: "/projects/grade.webp",
+    link: "https://gradeconstruction.com/",
+    tags: [TAGS.WORDPRESS, TAGS.ROOTS, TAGS.YARN, TAGS.TAILWIND, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT],
+    github: ""
+  },
+  {
     title: "Web Portal | Judicial Branch (Dom.Rep)",
     description:[
       "Implemented a cloud-based architecture using PHP, jQuery, and MySQL, with a strong focus on security and scalability.",
       "Optimized for SEO and Accessibility, ensuring broad visibility and easy navigation for all users.",
       "Seamlessly integrated various in-house developed solutions alongside third-party applications, delivering a holistic and user-centric digital experience.",
-      "Served as a pivotal driver of the company’s digital transformation efforts, especially during the 2020 pandemic, by creating new online avenues and opportunities."
+      "Served as a pivotal driver of the company's digital transformation efforts, especially during the 2020 pandemic, by creating new online avenues and opportunities."
       ],
     image: "/projects/PoderJudicial.webp",
     link: "https://poderjudicial.gob.do/",
@@ -147,15 +243,28 @@ const PROJECTS = [
     github: ""
   },
   {
+    title: "Micronmentals – Atlantic Equipment",
+    description: [
+      "Developed an informative site with custom template based on design file, built with WordPress using the TypeRocket Framework",
+      "Implemented new features with Twig, PostCSS and PHP",
+      "Led the integration of Algolia.js to enhance search with Autocomplete and InstantSearch AI controls",
+      "Key contributor in front-end and back-end development"
+    ],
+    image: "/projects/micronmetals.webp",
+    link: "https://micronmetals.com/",
+    tags: [TAGS.PHP, TAGS.ALGOLIA, TAGS.MYSQL, TAGS.JAVASCRIPT, TAGS.SASS, TAGS.GULP],
+    github: ""
+  },
+  {
     title: "e-Commerce Website | Quiosco Judicial - Judicial Branch (Dom.Rep)",
     description: [
       "Developed an e-commerce WordPress site for the Judicial Branch and the National School of the Judiciary, featuring a custom WooCommerce solution integrating a points-based rewards system.",
       "Users earn points through performance, event attendance, or task completion, then redeem them for items listed on the portal.",
       "Dashboards allow users to review points, transfer histories, and redemptions—all within a secure, scalable environment.",
-      "Played a key role in the institution’s digital transformation, driving engagement and motivation."
+      "Played a key role in the institution's digital transformation, driving engagement and motivation."
     ],
     image: "/projects/Quiosco.webp",
-    link: "https://quioscojudicial.gob.do/",
+    link: "https://quiosco.poderjudicial.gob.do/",
     tags: [TAGS.WORDPRESS, TAGS.ECOMMERCE, TAGS.PHP, TAGS.MYSQL, TAGS.JAVASCRIPT, TAGS.AZURE],
     github: ""
   },
